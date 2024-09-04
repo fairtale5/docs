@@ -4,6 +4,8 @@ sidebar_position: 3
 
 # Storage
 
+Upload files and make them accessible on URL's.
+
 Juno Storage is designed for app developers who need to store and serve user-generated content, such as photos or videos.
 
 It offers a powerful and cost-effective object storage solution on the blockchain.
