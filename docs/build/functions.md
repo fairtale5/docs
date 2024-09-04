@@ -4,7 +4,20 @@ sidebar_position: 5
 
 # Functions
 
-Functions are a set of Rust-based features enabling developers to extend the native capabilities of Satellites. Functions facilitate the creation and management of serverless behaviors within smart contracts, or [Satellites](../terminology.md#satellite). Triggered by specific events like document and asset operations, they allow developers to embed custom logic directly into the blockchain environment.
+Functions can act as triggers that execute when certain actions occur in Juno. For example, you can run a function each time someone updates a document in a collection.
+
+Functions are a set of Rust-based features which enable developers to extend the native capabilities of Satellites. Functions facilitate the creation and management of serverless behaviors within smart contracts, or [Satellites](../terminology.md#satellite). Triggered by specific events like document and asset operations, they allow developers to embed custom logic directly into the blockchain environment.
+
+## Examples
+
+- Whenever a user updates a document, validate its content to prevent errors caused by corrupted data input.
+- On certain actions, trigger a notification.
+- Under certain conditions, generate a new image and potentially mint it as an NFT.
+- Each time a document is created, run a function to query whether 24 hours have passed since the function last ran. If so, execute the function and reset the timer. This allows for an alternative type of scheduling.
+- Each time a user votes on something, run a function to sort the votes in descending order and save the results to a document that can be queried when needed. This prepares data for more advanced queries, making it readily available upon request.
+- Each time a new topic is created by a user, run a function that generates a static webpage and saves it in [Storage](https://juno.build/docs/build/storage). These static pages will be compatible with SEO and social link previews (X/Twitter, Telegram, WhatsApp, Facebook, etc.).
+
+As you can see, anything you want to happen after users interact with the Juno backend can be triggered through these Serverless Functions, as long as you can think of a trigger for the action you need.
 
 ---
 
